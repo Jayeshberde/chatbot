@@ -1,0 +1,56 @@
+import nltk
+from nltk.chat.util import Chat, reflections
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, How are you today ?",]
+    ],
+    [
+        r"hi|hey|hello",
+        ["Hello", "Hey there",]
+    ], 
+    [
+        r"what is your name?",
+        ["I am a bot created by Vidyavardhini college of engineering",]
+    ],
+    [
+        r"what is the college timing?",
+        ["Its from 9;00 am to 5:00pm",]
+    ],
+    [
+        r"how many department are available for admission?",
+        ["there are 8 departments in the college",]
+    ],
+    [
+        r"what are the document required for admission?",
+        ["you can contact 9999999999 for more information about admission",]
+    ],
+    [
+        r"(.*) placement (.*)?",
+        ["placement details are available on college website www.vcet.edu.in",]
+    ],
+    [
+        r"(.*) extra curricular activities",
+        ["there are various programs like zeal , avahan ,hackathon held throughout the year",]
+    ],
+    [
+        r"thank you",
+        ["Welcome ",]
+    ],
+    [
+        r"(.*) created (.*)?",
+        ["Jayesh created me using Python's NLTK library ","top secret ;)",]
+    ],
+    [
+        r"(.*) location?",
+        ['Vasai, Palghar',]
+    ],
+
+]
+def chat():
+    print("Hi! I am a chatbot created by Vidyavardhini college of engineering for your service")
+    chat = Chat(pairs, reflections)
+    chat.converse()
+#initiate the conversation
+if __name__ == "__main__":
+    chat()
